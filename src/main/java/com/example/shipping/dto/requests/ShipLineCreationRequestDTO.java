@@ -2,7 +2,7 @@ package com.example.shipping.dto.requests;
 
 import java.util.Date;
 
-import com.example.shipping.dto.BaseDTO;
+import com.example.util.dto.BaseDTO;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
 import com.fasterxml.jackson.annotation.JsonInclude;
