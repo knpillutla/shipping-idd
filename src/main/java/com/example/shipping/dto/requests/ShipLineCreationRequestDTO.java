@@ -1,6 +1,6 @@
 package com.example.shipping.dto.requests;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 import com.example.util.dto.BaseDTO;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
@@ -29,6 +29,6 @@ public class ShipLineCreationRequestDTO  extends BaseDTO{
 	String transactionName;
 	String refField1;
 	String refField2;
-	Date updatedDttm;
+	LocalDateTime updatedDttm;
 	String updatedBy;
 }

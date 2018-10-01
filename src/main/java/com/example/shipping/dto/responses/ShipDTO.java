@@ -1,8 +1,8 @@
 package com.example.shipping.dto.responses;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import com.example.util.dto.BaseDTO;
@@ -30,15 +30,15 @@ public class ShipDTO  extends BaseDTO implements Serializable{
 	Long orderId;
 	String orderNbr;
 	Integer statCode;
-	Date orderDttm;
-	Date shipByDttm;
-	Date expectedDeliveryDttm;
+	LocalDateTime orderDttm;
+	LocalDateTime shipByDttm;
+	LocalDateTime expectedDeliveryDttm;
 	String deliveryType;
 	String source;
 	String transactionName;
 	String refField1;
 	String refField2;
-	Date updatedDttm;
+	LocalDateTime updatedDttm;
 	String updatedBy;
 	String shipCarrier;
     String shipCarrierService;
