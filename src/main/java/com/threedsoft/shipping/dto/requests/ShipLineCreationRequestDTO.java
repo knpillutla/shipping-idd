@@ -1,11 +1,10 @@
-package com.example.shipping.dto.responses;
+package com.threedsoft.shipping.dto.requests;
 
-import java.io.Serializable;
 import java.time.LocalDateTime;
 
-import com.example.util.dto.BaseDTO;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
+import com.threedsoft.util.dto.WMSRequestDTO;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 import lombok.AllArgsConstructor;
@@ -17,8 +16,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @AllArgsConstructor
-public class ShipLineDTO  extends BaseDTO implements Serializable{
-	Long id;
+public class ShipLineCreationRequestDTO  extends WMSRequestDTO{
 	Integer shipLineNbr;
 	String itemBrcd;
 	Integer qty;

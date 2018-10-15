@@ -1,8 +1,9 @@
-package com.example.shipping.dto.requests;
+package com.threedsoft.shipping.dto.requests;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
+import com.threedsoft.util.dto.WMSRequestDTO;
+import com.fasterxml.jackson.annotation.JsonInclude;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,7 +14,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @AllArgsConstructor
-public class ShipLineStatusUpdateRequestDTO {
+public class ShipLineStatusUpdateRequestDTO extends WMSRequestDTO{
 	Long id;
 	Long orderId;
 	String busName;

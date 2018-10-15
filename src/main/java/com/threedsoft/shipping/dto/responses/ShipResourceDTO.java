@@ -1,11 +1,13 @@
-package com.example.shipping.dto.requests;
+package com.threedsoft.shipping.dto.responses;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
-import com.example.util.dto.BaseDTO;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
+import com.threedsoft.util.dto.WMSResourceDTO;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 import lombok.AllArgsConstructor;
@@ -17,7 +19,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @AllArgsConstructor
-public class ShipCreationRequestDTO extends BaseDTO{
+public class ShipResourceDTO  extends WMSResourceDTO implements Serializable{
+	Long id;
 	String busName;
 	Integer locnNbr;
 	String company;
@@ -26,10 +29,21 @@ public class ShipCreationRequestDTO extends BaseDTO{
 	String batchNbr;
 	Long orderId;
 	String orderNbr;
+	Integer statCode;
 	LocalDateTime orderDttm;
 	LocalDateTime shipByDttm;
 	LocalDateTime expectedDeliveryDttm;
 	String deliveryType;
+	String source;
+	String transactionName;
+	String refField1;
+	String refField2;
+	LocalDateTime updatedDttm;
+	String updatedBy;
+	String shipCarrier;
+    String shipCarrierService;
+    String trackingNbr;
+    double shipCost;
     String firstName;
     String lastName;
     String middleName;
@@ -41,11 +55,15 @@ public class ShipCreationRequestDTO extends BaseDTO{
     String country;
     String zipcode;
     String phoneNbr;
-	String source;
-	String transactionName;
-	String refField1;
-	String refField2;
-	String userId;
-	List<ShipLineCreationRequestDTO> shipLines;
-}
+	
+	List<ShipLineResourceDTO> orderLines = new ArrayList<>();
+	
 
+    public void addOrderLine(ShipLineResourceDTO orderLineDTO) {
+    	orderLines.add(orderLineDTO);
+    }
+ 
+    public void removeOrderLine(ShipLineResourceDTO orderLineDTO) {
+    	orderLines.remove(orderLineDTO);
+    }
+}
