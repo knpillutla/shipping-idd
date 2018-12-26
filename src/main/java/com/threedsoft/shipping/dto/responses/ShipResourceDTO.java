@@ -55,6 +55,10 @@ public class ShipResourceDTO  extends WMSResourceDTO implements Serializable{
     String country;
     String zipcode;
     String phoneNbr;
+	String shipLabelFormat;
+	byte[] shipLabel;
+	String invoiceLabelFormat;
+	byte[] invoiceLabel;
 	
 	List<ShipLineResourceDTO> orderLines = new ArrayList<>();
 	
