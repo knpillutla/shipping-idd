@@ -25,6 +25,7 @@ public class FacilityCarrierDTO  extends WMSResourceDTO implements Serializable{
 	Integer locnNbr;
 	String carrierCode;
 	String accountNbr;
+	String isEnabled;
 	String source;
 	String transactionName;
 	String refField1;
